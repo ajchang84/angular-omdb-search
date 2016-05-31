@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='MovieSearchApp'>
+<head>
+  <meta charset="UTF-8">
+  <title>Angular OMDb API Search</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/controllers.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <base href="/">
+</head>
+<body ng-controller="MovieSearchController">
+  <h1 class='text-center'>Angular OMBDb API Search</h1>
+  <form class='text-center' ng-submit="search()" >
+    <label class='form-group'>
+      <p>Enter a movie by title.</p>
+      <input placeholder="movie title e.g. 'Die Hard'" ng-model="form.search">
+      <button class="btn btn-primary" type='submit'>Search! 
+        <span class="glyphicon glyphicon-search"></span>
+      </button>    
+    </label>
+  </form>
+  <hr>
+    <div class="container">
+      <div ng-view></div>
+    </div>
+</body>
+</html>
